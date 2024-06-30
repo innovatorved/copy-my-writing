@@ -3,9 +3,26 @@ requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "copy-my-writing"
+name = "copy_my_writing"
 description = "A CLI tool for generating content based on personal writing style"
+readme = "README.md"
 requires-python = ">=3.7"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "Click",
+    "langchain",
+    "openai",
+    "python-dotenv",
+    "langchain-openai"
+]
 dynamic = ["version"]
+
+[project.scripts]
+copy_my_writing = "copy_my_writing.cli:cli"
 
 [tool.setuptools_scm]

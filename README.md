@@ -5,7 +5,7 @@ Copy My Writing is a command-line tool for generating content based on your pers
 ## Project Structure
 
 ```
-copy-my-writing/
+copy_my_writing/
 │
 ├── src/
 │   ├── copy_my_writing/
@@ -49,17 +49,17 @@ copy-my-writing/
 
 Generate content:
 ```
-copy-my-writing generate "Your topic here"
+copy_my_writing generate "Your topic here"
 ```
 
 Analyze current style:
 ```
-copy-my-writing analyze-style
+copy_my_writing analyze-style
 ```
 
 For more information, use the `--help` flag:
 ```
-copy-my-writing --help
+copy_my_writing --help
 ```
 
 ## Configuration
