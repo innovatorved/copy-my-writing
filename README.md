@@ -33,13 +33,6 @@ copy_my_writing --help
 
 The configuration for Copy My Writing is stored in the `.env` file. It contains the OpenAI API key and the path to the writing samples JSON file.
 
-## Contributing
-
-Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) for more information.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
-
-Please let me know if there is anything else I can help you with.
