@@ -8,6 +8,9 @@ description = "A CLI tool for generating content based on personal writing style
 readme = "README.md"
 requires-python = ">=3.7"
 license = {text = "MIT"}
+authors = [
+    {name = "Ved Gupta", email = "me@vedgupta.in"},
+]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
