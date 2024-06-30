@@ -1,6 +1,7 @@
 import unittest
 from copy_my_writing.style_analyzer import StyleAnalyzer
 
+
 class TestStyleAnalyzer(unittest.TestCase):
     def setUp(self):
         self.style_analyzer = StyleAnalyzer("data/writing_samples.json")
@@ -16,9 +17,12 @@ class TestStyleAnalyzer(unittest.TestCase):
         self.assertEqual(actual_sentence_structure, expected_sentence_structure)
 
     def test_analyze_tone(self):
-        expected_tone = "Maintain a reflective and introspective tone. Be personal and authentic."
+        expected_tone = (
+            "Maintain a reflective and introspective tone. Be personal and authentic."
+        )
         actual_tone = self.style_analyzer.analyze_tone()
         self.assertEqual(actual_tone, expected_tone)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

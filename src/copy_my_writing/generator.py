@@ -4,6 +4,7 @@ from .config import load_logger
 
 logger = load_logger()
 
+
 class ContentGenerator:
     def __init__(self, config):
         self.config = config
