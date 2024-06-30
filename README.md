@@ -2,39 +2,6 @@
 
 Copy My Writing is a command-line tool for generating content based on your personal writing style.
 
-## Project Structure
-
-```
-copy_my_writing/
-│
-├── src/
-│   ├── copy_my_writing/
-│   │   ├── __init__.py
-│   │   ├── cli.py
-│   │   ├── generator.py
-│   │   ├── openai_service.py
-│   │   ├── style_analyzer.py
-│   │   └── config.py
-│   │
-│   └── tests/
-│       ├── __init__.py
-│       ├── test_generator.py
-│       ├── test_openai_service.py
-│       └── test_style_analyzer.py
-│
-├── data/
-│   └── writing_samples.json
-│
-├── logs/
-│   └── .gitkeep
-│
-├── .env
-├── pyproject.toml
-├── setup.py
-├── README.md
-└── .gitignore
-```
-
 ## Installation
 
 1. Clone this repository.

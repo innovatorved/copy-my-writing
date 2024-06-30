@@ -31,8 +31,13 @@ def generate(ctx, topic, output):
     """Generate content on a given topic"""
     config = ctx.obj["config"]
     generator = ContentGenerator(config)
+    full_content = ""
     content = generator.generate(topic)
-    click.echo(content, file=output)
+    for message in content:
+        full_content += message
+        click.echo(message, file=output, nl=False)
+    logger.debug(f"Generated content: {full_content}")
+    click.echo(file=output)
 
 
 @cli.command()
