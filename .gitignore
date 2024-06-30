@@ -19,3 +19,4 @@ var/
 .installed.cfg
 *.egg
 .env
+logs/app.log

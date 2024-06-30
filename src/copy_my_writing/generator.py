@@ -1,8 +1,8 @@
-import logging
 from .openai_service import OpenAIService
 from .style_analyzer import StyleAnalyzer
+from .config import load_logger
 
-logger = logging.getLogger(__name__)
+logger = load_logger()
 
 class ContentGenerator:
     def __init__(self, config):

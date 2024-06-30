@@ -1,7 +1,8 @@
 import click
-import logging
 from .generator import ContentGenerator
-from .config import load_config
+from .config import load_config, load_logger
+
+logger = load_logger()
 
 @click.group()
 @click.option('--debug/--no-debug', default=False, help="Enable debug logging")
@@ -12,8 +13,7 @@ def cli(ctx, debug):
     config = load_config()
     ctx.obj['config'] = config
     
-    log_level = logging.DEBUG if debug else logging.INFO
-    logging.basicConfig(level=log_level, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    logger.debug(debug) if debug else logger.info("Debug logging is disabled")
 
 @cli.command()
 @click.argument('topic')

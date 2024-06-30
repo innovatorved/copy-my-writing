@@ -1,7 +1,7 @@
 import json
-import logging
+from .config import load_logger
 
-logger = logging.getLogger(__name__)
+logger = load_logger()
 
 class StyleAnalyzer:
     def __init__(self, samples_path: str):

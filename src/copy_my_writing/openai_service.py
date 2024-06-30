@@ -1,8 +1,8 @@
-import logging
 from langchain_openai import OpenAI
 from langchain_core.prompts import PromptTemplate
+from .config import load_logger
 
-logger = logging.getLogger(__name__)
+logger = load_logger()
 
 class OpenAIService:
     def __init__(self, api_key: str):
