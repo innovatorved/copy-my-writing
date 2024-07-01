@@ -8,7 +8,9 @@ logger = load_logger()
 class ContentGenerator:
     def __init__(self, config):
         self.config = config
-        self.openai_service = OpenAIService(config.openai_api_key)
+        self.openai_service = OpenAIService(
+            config.openai_api_key, config.openai_base_url, config.model
+        )
         self.style_analyzer = StyleAnalyzer(config.writing_samples_path)
 
     def generate(self, topic: str) -> str:

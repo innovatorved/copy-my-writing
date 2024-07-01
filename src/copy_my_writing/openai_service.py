@@ -6,8 +6,10 @@ logger = load_logger()
 
 
 class OpenAIService:
-    def __init__(self, api_key: str):
-        self.llm = OpenAI(api_key=api_key, streaming=True)
+    def __init__(self, api_key: str, base_url: str, model: str):
+        self.llm = OpenAI(
+            api_key=api_key, streaming=True, base_url=base_url, model=model
+        )
 
     def generate_content(
         self, topic: str, style_guide: str, lang: str = "hindi"
