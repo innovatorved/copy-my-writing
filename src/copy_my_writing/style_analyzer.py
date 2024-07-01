@@ -3,11 +3,10 @@ from .config import load_logger
 
 logger = load_logger()
 
-
 class StyleAnalyzer:
     def __init__(self, samples_path: str):
         with open(samples_path, "r") as f:
-            self.samples = json.load(f)
+            self.samples = json.load(f).get("writing_samples", [])
         logger.info(f"Loaded {len(self.samples)} writing samples")
 
     def get_style_guide(self) -> str:
