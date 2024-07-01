@@ -29,6 +29,10 @@ For more information, use the `--help` flag:
 copy_my_writing --help
 ```
 
+## Data License
+
+All data contained within the `data` folder, including but not limited to files within `data/Keep` and `data/KeepProcessed`, is considered private and confidential. This data is not covered by the MIT License that applies to the source code of this project. Any use, distribution, reproduction, or sharing of this data, in whole or in part, is strictly prohibited without explicit written permission from the copyright holder.
+
 ## Configuration
 
 The configuration for Copy My Writing is stored in the `.env` file. It contains the OpenAI API key and the path to the writing samples JSON file.

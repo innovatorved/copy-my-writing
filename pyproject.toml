@@ -18,6 +18,7 @@ classifiers = [
 ]
 dependencies = [
     "Click",
+    "aiofiles",
     "langchain",
     "openai",
     "python-dotenv",
