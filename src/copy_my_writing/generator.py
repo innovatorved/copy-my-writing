@@ -13,5 +13,7 @@ class ContentGenerator:
 
     def generate(self, topic: str) -> str:
         style_guide = self.style_analyzer.get_style_guide()
-        content = self.openai_service.generate_content(topic, style_guide)
+        content = self.openai_service.generate_content(
+            topic, style_guide, self.config.output_language
+        )
         return content

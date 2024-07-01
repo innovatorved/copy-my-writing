@@ -8,6 +8,7 @@ from .logger import AppLogger
 class Config:
     openai_api_key: str
     writing_samples_path: str
+    output_language: str = "hindi"
 
 
 def load_config() -> Config:
