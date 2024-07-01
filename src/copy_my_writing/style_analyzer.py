@@ -3,6 +3,7 @@ from .config import load_logger
 
 logger = load_logger()
 
+
 class StyleAnalyzer:
     def __init__(self, samples_path: str):
         with open(samples_path, "r") as f:
@@ -14,12 +15,18 @@ class StyleAnalyzer:
         sentence_structure = self.analyze_sentence_structure()
         tone = self.analyze_tone()
 
+        # Format writing samples with a preceding number
+        examples = "\n".join([f"{idx + 1}. {sample['textContent']}" for idx, sample in enumerate(self.samples)])
+        print(examples[0:800])
+
         style_guide = (
-            f"Use the following style guide: {word_choice} {sentence_structure} {tone}"
+            f"Use the following style guide: {word_choice} {sentence_structure} {tone}\n"
+            "Copy the tone of the following examples:\n"
+            f"{examples}"
         )
         logger.debug(f"Generated style guide: {style_guide}")
         return style_guide
-
+    
     def analyze_word_choice(self) -> str:
         # Implement more sophisticated analysis here
         return "Use vivid and descriptive language. Prefer concrete nouns over abstract concepts."
