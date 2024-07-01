@@ -25,12 +25,15 @@ async def combine_json_files(processed_files_dir, target_json_path):
         if filename.endswith(".json"):
             file_path = os.path.join(processed_files_dir, filename)
             data = await read_json_file(file_path)
+            data["textContent"] = " ".join(data["textContent"].split())
+            data["textContent"] = data["textContent"].replace("#its_ved", "")
             combined_data.append(data)
 
-    target_data = await read_json_file(target_json_path)
+    target_data = {"writing_samples": []}
     target_data["writing_samples"].extend(combined_data)
 
     await write_json_file(target_json_path, target_data)
 
 
+w
 asyncio.run(combine_json_files(processed_files_dir, target_json_path))

@@ -16,8 +16,12 @@ class StyleAnalyzer:
         tone = self.analyze_tone()
 
         # Format writing samples with a preceding number
-        examples = "\n".join([f"{idx + 1}. {sample['textContent']}" for idx, sample in enumerate(self.samples)])
-        print(examples[0:800])
+        examples = "\n".join(
+            [
+                f"{idx + 1}. {sample['textContent']}"
+                for idx, sample in enumerate(self.samples[0:10])
+            ]
+        )
 
         style_guide = (
             f"Use the following style guide: {word_choice} {sentence_structure} {tone}\n"
@@ -26,7 +30,7 @@ class StyleAnalyzer:
         )
         logger.debug(f"Generated style guide: {style_guide}")
         return style_guide
-    
+
     def analyze_word_choice(self) -> str:
         # Implement more sophisticated analysis here
         return "Use vivid and descriptive language. Prefer concrete nouns over abstract concepts."
