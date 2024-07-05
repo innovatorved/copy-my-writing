@@ -2,6 +2,8 @@
 
 Copy My Writing is a command-line tool for generating content based on your personal writing style.
 
+❌ Please Don't use for, Incomplete Project ❌
+
 ## Installation
 
 1. Clone this repository.
